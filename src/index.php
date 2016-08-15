@@ -158,7 +158,7 @@ $app->post('/addlist', function(Request $request, Response $response){
         $colour = filter_var($value['colour'], FILTER_SANITIZE_NUMBER_INT);
         $date = filter_var($value['date'], FILTER_SANITIZE_STRING);
         $code = filter_var($value['itemcode'], FILTER_SANITIZE_STRING);
-        $dataid = filter_var($data['dataid'], FILTER_SANITIZE_STRING);
+        $dataid = filter_var($value['dataid'], FILTER_SANITIZE_STRING);
 
         $db->addItem($title,$desc,$colour,$date,$code, $dataid);
     }
